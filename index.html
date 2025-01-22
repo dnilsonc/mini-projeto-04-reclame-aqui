@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclame Aqui - Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h2 id="titulo">Cadastro de Reclamações</h2>
+        <form id="formulario" action="index.html" method="post">
+            <!-- Campo Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <span class="feedback" id="nomeFeedback"></span>
+
+            <!-- Campo Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="feedback" id="emailFeedback"></span>
+
+            <!-- Campo Senha -->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <span class="feedback" id="senhaFeedback"></span>
+
+            <!-- Campo CPF -->
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+            <span class="feedback" id="cpfFeedback"></span>
+
+            <!-- Campo Telefone -->
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="00 00000-0000">
+            <span class="feedback" id="telefoneFeedback"></span>
+
+            <!-- Campo Data da Ocorrência -->
+            <label for="dataOcorrencia">Data da Ocorrência:</label>
+            <input type="date" id="dataOcorrencia" name="dataOcorrencia" required>
+            <span class="feedback" id="dataOcorrenciaFeedback"></span>
+
+            <!-- Categoria -->
+            <div id="categoriaContainer">
+                <label for="ocorrencia">Categoria:</label>
+                <select id="ocorrencia" name="ocorrencia" required>
+                    <option value="">Selecione</option>
+                    <option value="1">Educação</option>
+                    <option value="2">Fornecimento de Água</option>
+                    <option value="3">Fornecimento de Energia</option>
+                    <option value="4">Saúde</option>
+                    <option value="5">Segurança Pública</option>
+                </select>
+                <span class="feedback" id="ocorrenciaFeedback"></span>
+            </div>
+
+            <!-- Campo Mensagem -->
+            <label for="mensagem">Registre aqui sua reclamação:</label>
+            <textarea id="mensagem" name="mensagem" rows="6"></textarea>
+            <span class="feedback" id="mensagemFeedback"></span>
+
+            <!-- Botões -->
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
